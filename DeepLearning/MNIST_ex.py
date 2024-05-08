@@ -46,4 +46,4 @@ plt.imshow(image.reshape(28, 28),cmap='Greys')
 plt.show()
 
 pred = model.predict(image.reshape(1, 784), batch_size=1)
-print("추정된 숫자=", pred.argmax())
+print("추정된 숫자=", pred.argmax()) 
