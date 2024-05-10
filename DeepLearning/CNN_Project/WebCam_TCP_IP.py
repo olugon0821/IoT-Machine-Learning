@@ -3,13 +3,14 @@ import numpy as np
 import tensorflow as tf
 import socket
 
+# 소켓 연결
 HOST = '192.168.0.8'
 PORT = 9999
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 
+# 데이터 전송하는 함수
 def send_to_java_ui(data):
-    # 자바 UI로 데이터 전송하는 함수
     try:
         s.send(data.encode('UTF-8'))
     except Exception as e:
